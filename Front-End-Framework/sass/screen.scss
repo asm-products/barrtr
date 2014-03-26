@@ -1,0 +1,23 @@
+// Yeah, we on that Compass. Boo.
+@import "compass/reset";
+
+
+// Stylesheet that aggregates all style dependencies
+
+// HTML 5 
+@import "partials/_fonts.scss";
+
+// HTML 5 
+@import "partials/_html5.scss";
+
+// Utility mixins for greater good
+@import "partials/_mixins.scss";
+
+// grid structure
+@import "partials/_grid.scss";
+
+// The configuration
+@import "partials/_config.scss";
+
+// The Kitten Kaboodle
+@import "partials/_site.scss";

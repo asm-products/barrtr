@@ -1,0 +1,272 @@
+//
+// Define Global Variables
+// --------------------------------------------------
+$radius: 3px; //Global border radius
+
+// --------------------------------------------------
+// Global Color Swatches
+// --------------------------------------------------
+
+//UI Defaults
+$base: #666; //sets a base color for text UI elements such as inputs, radios, buttons, etc...
+$accent: #3498db; //sets an accent to the base color used for things like :focus, links, selected, etc.. 
+$inverse-text: #fff; //sets a color for text on dark backgrounds
+
+//Global link color
+$link-color: #0088cc; //blue
+$link-hover-color: darken($link-color, 20%);
+
+//Primary Branded Colors
+$swatch-1: #931638; //maroon
+$swatch-2: #8c7f70; //brown
+
+//Secondary Branded Colors
+$swatch-3: #efb22d; //dark yellow
+$swatch-4: #FFD87F; //light yellow
+$swatch-5: #87A03C; //green
+$swatch-6: #00818B; //turquoise
+$swatch-7: #664A78; //purple
+$swatch-8: #D47F2B; //orange
+
+//Monochromatic - greyscale colors
+$black: #000; //black
+$grey-10: lighten($black, 90%); 
+$grey-20: lighten($black, 80%); 
+$grey-30: lighten($black, 70%);
+$grey-40: lighten($black, 60%);
+$grey-50: lighten($black, 50%);
+$grey-60: lighten($black, 40%);
+$grey-70: lighten($black, 30%);
+$grey-80: lighten($black, 20%);
+$grey-90: lighten($black, 10%);
+
+//
+//Additional off brand Helpers
+// --------------------------------------------------
+$midnight-blue: #2c3e50; //dark blue
+$info: #3498db; //blue
+$success: #0F9E4C; //green
+$warning: #FDB10E; //orangish-yellow
+$danger: #e74c3c; //red
+
+
+// -----------------------------------------------------------------
+// Typography
+// ------------------------------------------------------------------
+
+$base-font-family: "Lato", arial, sans-serif;
+$secondary-font-family: "PT+Serif", "Times New Roman", serif;
+$base-text-color: $base;
+$base-font-size: 1em; // 16px
+$base-line-height: 100%;
+
+$h1-family: $base-font-family;
+$h1-size: $base-font-size * 3.125;
+$h1-weight: 700;
+$h1-margin: 0 0 .85em;
+$h1-padding: 0;
+$h1-text-color: $grey-90;
+$h1-line-height: 120%;
+$h1-letter-spacing: auto;
+
+$h2-family: $base-font-family;
+$h2-size: $base-font-size * 1.875;
+$h2-weight: 500;
+$h2-margin: 0 0 .85em;
+$h2-padding: 0;
+$h2-text-color: $swatch-1;
+$h2-line-height: 120%;
+$h2-letter-spacing: auto;
+
+$h3-family: $base-font-family;
+$h3-size: $base-font-size * 1.5;
+$h3-weight: 500;
+$h3-margin: 0 0 .85em;
+$h3-padding: 0;
+$h3-text-color: $grey-70;
+$h3-line-height: 120%;
+$h3-letter-spacing: auto;
+
+$h4-family: $base-font-family;
+$h4-size: $base-font-size * 1.125;
+$h4-weight: 300;
+$h4-margin: 0 0 .85em;
+$h4-padding: 0;
+$h4-text-color: $grey-70;
+$h4-line-height: 100%;
+$h4-letter-spacing: auto;
+
+$h5-family: $base-font-family;
+$h5-size: $base-font-size;
+$h5-weight: 300;
+$h5-margin: 0 0 .85em;
+$h5-padding: 0;
+$h5-text-color: $base;
+$h5-line-height: 100%;
+$h5-letter-spacing: auto;
+
+$h6-family: $base-font-family;
+$h6-size: $base-font-size * 0.875;
+$h6-weight: 300;
+$h6-margin: 0 0 .85em;
+$h6-padding: 0;
+$h6-text-color: $base;
+$h6-line-height: 100%;
+$h6-letter-spacing: auto;
+
+$p-family: $base-font-family;
+$p-size: $base-font-size * 1.175;
+$p-weight: 300;
+$p-margin: 1em 0 1em 0;
+$p-padding: 0;
+$p-text-color: $base;
+$p-line-height: 1.5em;
+$p-letter-spacing: auto;
+
+$blockquote-family: $secondary-font-family;
+$blockquote-size: $p-size;
+$blockquote-weight: 300;
+$blockquote-margin: 2em 0;
+$blockquote-padding: 0 0 0 1em;
+$blockquote-text-color: $grey-80;
+$blockquote-line-height: 1.5em;
+$blockquote-letter-spacing: auto;
+$blockquote-border: 2px solid $accent;
+$author-size: $blockquote-size * 1;
+$author-line-height: .5em;
+
+$list-family: $base-font-family;
+$list-text-size: $p-size;
+$list-weight: $p-weight;
+$list-margin: 0 0 1em 0;
+$list-padding: 0 0 0 2em;
+$list-text-color: $base;
+$list-line-height: $p-line-height;
+$list-letter-spacing: $p-letter-spacing;
+
+$li-padding: 0;
+$li-margin: 0;
+
+$dd-padding: 0;
+$dd-margin: 0 0 1em 0;
+$dt-text-color: darken($list-text-color, 60%);
+$dd-text-color: $list-text-color;
+
+// Icons
+// -------------------------
+$icon-font-size: 1em;
+
+// -----------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------
+
+//Default button background colors assigned by using the class .btn
+$button-background-color: lighten($base, 30%);
+$button-text-color: $inverse-text;
+$button-text-size: $base-font-size * 1.1; 
+$button-text-weight: 300;
+$button-line-height: 1.5em;
+$button-padding: .75em 1.2em .775em;
+$button-radius: $radius;
+$button-border: none;
+$button-background-color-hover: mix($button-background-color, white, 80%);
+$button-text-color-hover: $inverse-text;
+$button-text-color-active: $inverse-text;
+$button-background-color-active: mix($button-background-color, black, 85%);
+
+//Primay button color added with class of .btn-primary
+$button-primary: $swatch-1;
+$button-primary-hover:  mix($button-primary, white, 80%);
+$button-primary-active: mix($button-primary, black, 85%);
+$button-primary-text-color: $inverse-text;
+$button-primary-text-color-hover: $inverse-text;
+
+//Secondary button color added with class of .btn-secondary
+$button-secondary: $swatch-2;
+$button-secondary-hover:  mix($button-secondary, white, 80%);
+$button-secondary-active: mix($button-secondary, black, 85%);
+$button-secondary-text-color: $inverse-text;
+$button-secondary-text-color-hover: $inverse-text;
+
+//Hollow button added with class of .btn-hollow
+$button-hollow: transparent;
+$button-hollow-border: 2px solid $swatch-1;
+$button-hollow-hover:  transparent;
+$button-hollow-border-hover: 2px solid $accent;
+$button-hollow-active: $accent;
+$button-hollow-text-color: $swatch-1;
+$button-hollow-line-height: $button-line-height * .85;
+$button-hollow-text-color-hover: $accent;
+
+//CTA button with a larger display class of .btn-cta
+$button-cta: $swatch-1;
+$button-cta-hover: mix($swatch-1, white, 80%);
+$button-cta-active: mix($swatch-1, black, 85%);
+$button-cta-size: $base-font-size * 1.25;
+$button-cta-text-color: $inverse-text;
+$button-cta-line-height: 1.5em;
+$button-cta-text-color: $inverse-text;
+$button-cta-text-color-hover: $inverse-text;
+
+//Hollow CTA button added with class of .btn-cta-hollow
+$button-cta-hollow: transparent;
+$button-cta-hollow-hover:  transparent;
+$button-cta-hollow-active: $accent;
+$button-cta-hollow-border: 2px solid $swatch-1;
+$button-cta-hollow-border-hover: 2px solid $accent;
+$button-cta-hollow-text-color: $swatch-1;
+$button-cta-hollow-text-color-hover: $accent;
+$button-cta-hollow-line-height: $button-cta-line-height * .9;
+
+//Helper Buttons
+//---------------------------------------------------
+//Color added with class of .btn-info
+$button-info: $info;
+$button-info-hover:   mix($button-info, white, 80%);
+$button-info-active:  mix($button-info, black, 85%);
+$button-info-text-color: $inverse-text;
+$button-info-text-color-hover: $inverse-text;
+
+//Color added with class of .btn-success
+$button-success: $success;
+$button-success-hover:  mix($button-success, white, 80%);
+$button-success-active: mix($button-success, black, 85%);
+$button-success-text-color: $inverse-text;
+$button-success-text-color-hover: $inverse-text;
+
+//Color added with class of .btn-danger
+$button-danger: $danger;
+$button-danger-hover:   mix($button-danger, white, 80%);
+$button-danger-active:  mix($button-danger, black, 85%);
+$button-danger-text-color: $inverse-text;
+$button-danger-text-color-hover: $inverse-text;
+
+//Color added with class of .btn-warning
+$button-warning: $warning;
+$button-warning-hover:  overlay($button-warning, darken(white, 37.5%));
+$button-warning-active: mix($button-warning, black, 85%);
+$button-warning-text-color: $inverse-text;
+$button-warning-text-color-hover: $inverse-text;
+
+//Inverse of primary button class of .btn-inverse
+$button-inverse: $grey-70;
+$button-inverse-hover: mix($button-inverse, black, 40%);
+$button-inverse-active: mix($button-inverse, white, 85%);
+$button-inverse-text-color: $inverse-text;
+$button-inverse-text-color-hover: $inverse-text;
+
+// -----------------------------------------------------------------
+// App specific variables
+// -----------------------------------------------------------------
+
+// ------------------------------
+// Breakpoints - Set Viewports
+// ------------------------------
+$bp-1: 64em;
+$bp-2: 50em;
+$bp-3: 44em;
+$bp-4: 40em;
+$bp-5: 34em;
+$bp-6: 30em;
+$bp-7: 22.5em;
+$bp-8: 20em;
