@@ -4,13 +4,13 @@
 
 // Stylesheet that aggregates all style dependencies
 
-// HTML 5 
+// All over my fonts and stuff
 @import "partials/_fonts.scss";
 
 // HTML 5 
 @import "partials/_html5.scss";
 
-// Utility mixins for greater good
+// Utility mixins for the greater good
 @import "partials/_mixins.scss";
 
 // grid structure
@@ -18,6 +18,17 @@
 
 // The configuration
 @import "partials/_config.scss";
+
+// Display stuff
+
+// Typography
+@import "partials/_typography.scss";
+
+// Buttons
+@import "partials/_buttons.scss";
+
+// Forms
+@import "partials/_input.scss";
 
 // The Kitten Kaboodle
 @import "partials/_site.scss";

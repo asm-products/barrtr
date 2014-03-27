@@ -17,8 +17,8 @@ $link-color: #0088cc; //blue
 $link-hover-color: darken($link-color, 20%);
 
 //Primary Branded Colors
-$swatch-1: #931638; //maroon
-$swatch-2: #8c7f70; //brown
+$swatch-1: #F9A53E; //gold
+$swatch-2: #666; //grey-ish
 
 //Secondary Branded Colors
 $swatch-3: #efb22d; //dark yellow
@@ -54,7 +54,7 @@ $danger: #e74c3c; //red
 // Typography
 // ------------------------------------------------------------------
 
-$base-font-family: "Lato", arial, sans-serif;
+$base-font-family: "Signika Negative", sans-serif;
 $secondary-font-family: "PT+Serif", "Times New Roman", serif;
 $base-text-color: $base;
 $base-font-size: 1em; // 16px
@@ -62,7 +62,7 @@ $base-line-height: 100%;
 
 $h1-family: $base-font-family;
 $h1-size: $base-font-size * 3.125;
-$h1-weight: 700;
+$h1-weight: 600;
 $h1-margin: 0 0 .85em;
 $h1-padding: 0;
 $h1-text-color: $grey-90;
@@ -71,7 +71,7 @@ $h1-letter-spacing: auto;
 
 $h2-family: $base-font-family;
 $h2-size: $base-font-size * 1.875;
-$h2-weight: 500;
+$h2-weight: 600;
 $h2-margin: 0 0 .85em;
 $h2-padding: 0;
 $h2-text-color: $swatch-1;
@@ -80,7 +80,7 @@ $h2-letter-spacing: auto;
 
 $h3-family: $base-font-family;
 $h3-size: $base-font-size * 1.5;
-$h3-weight: 500;
+$h3-weight: 600;
 $h3-margin: 0 0 .85em;
 $h3-padding: 0;
 $h3-text-color: $grey-70;
@@ -255,9 +255,37 @@ $button-inverse-active: mix($button-inverse, white, 85%);
 $button-inverse-text-color: $inverse-text;
 $button-inverse-text-color-hover: $inverse-text;
 
-// -----------------------------------------------------------------
-// App specific variables
-// -----------------------------------------------------------------
+// Inputs
+// ----------------------------------------
+
+// Set default values for all inputs
+$input-border: 2px solid $grey-20;
+$input-border-focused: 2px solid $accent;
+$input-text-color: #000;
+$input-width: 100%;
+$input-padding: 0 0 0 6px;
+$input-height: 3.25em;
+$input-radius: $radius;
+
+$input-placeholder-color: $swatch-1;
+$input-placeholder-height: 100%; //line-height
+$input-placeholder-padding: 0 0 0 0;
+
+// Set color of helper inputs
+$input-error: $danger;
+$input-success: $success;
+$input-warning: $warning;
+$input-info: $info;
+
+// Checkbox & Radios
+// -------------------------
+$checkbox-radio-text-color: $grey-40;
+$checkbox-radio-text-color-active: $accent;
+$checkbox-radio-margin: 0;
+$checkbox-radio-padding: 0 0 1em 1.75em;
+$checkbox-radio-icon-size: $icon-font-size;
+$checkbox-radio-icon-height: auto;
+$checkbox-radio-icon-width: auto;
 
 // ------------------------------
 // Breakpoints - Set Viewports

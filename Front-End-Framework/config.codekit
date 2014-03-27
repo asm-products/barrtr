@@ -28,6 +28,14 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/partials\/_buttons.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/partials\/_buttons.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/print.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -141,6 +149,36 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/partials\/.checkbox-and-radio.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/partials\/.checkbox-and-radio.scss",
+		"outputAbbreviatedPath": "\/css\/checkbox-and-radio.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/partials\/_buttons.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/partials\/_buttons.scss",
+		"outputAbbreviatedPath": "\/css\/_buttons.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/partials\/_config.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -201,6 +239,21 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/partials\/_input.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/partials\/_input.scss",
+		"outputAbbreviatedPath": "\/css\/_input.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/partials\/_mixins.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -225,6 +278,21 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/partials\/_site.scss",
 		"outputAbbreviatedPath": "\/css\/_site.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/partials\/_typography.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/partials\/_typography.scss",
+		"outputAbbreviatedPath": "\/css\/_typography.css",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,

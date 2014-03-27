@@ -1,1 +1,25 @@
 // Here are the site specific styles
+
+header{
+	background-color: $swatch-1;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	padding:1em;
+	h1{
+		font-size:1.5em;
+		color: $inverse-text;
+		margin-bottom:0;
+	}
+}
+
+.sign-up{
+	@include box-sizing;
+	@include vertical-align;
+	margin: 0 auto;
+	border: 1px solid $grey-30;
+	width:65%;
+	text-align:center;
+	padding:3em;
+}
