@@ -49,6 +49,7 @@
     "grunt-nodemon": "0.2.0",
     "grunt-concurrent": "latest",
     "grunt-mocha-test": "latest",
+    "grunt-sass": "latest",
     "karma": "~0.10.4",
     "karma-coffee-preprocessor": "~0.1.0",
     "karma-coverage": "~0.1.0",

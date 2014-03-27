@@ -91,6 +91,13 @@ module.exports = function(grunt) {
             unit: {
                 configFile: 'test/karma/karma.conf.js'
             }
+        },
+        sass: {
+            dist: {
+                files: {
+                    'public/stylesheets/style.css' : 'assets/sass/style.scss'
+                }
+            }
         }
     });
 
@@ -105,6 +112,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-env');
+    grunt.loadNpmTasks('grunt-sass');
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
@@ -113,7 +121,7 @@ module.exports = function(grunt) {
     if (process.env.NODE_ENV === 'production') {
         grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'concurrent']);
     } else {
-        grunt.registerTask('default', ['jshint', 'csslint', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'csslint', 'concurrent', 'sass']);
     }
 
     //Test task.
