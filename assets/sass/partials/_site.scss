@@ -1,25 +1,120 @@
 // Here are the site specific styles
 
-header{
-	background-color: $swatch-1;
-	position: fixed;
-	top:0;
-	left:0;
-	width:100%;
-	padding:1em;
-	h1{
-		font-size:1.5em;
+#sign-up{
+	background-color:$swatch-1;
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.75), white);
+	text-align:center;
+	position:relative;
+	h1, h2, p, form{
 		color: $inverse-text;
-		margin-bottom:0;
+	}
+	.guts{
+		@extend %vertical-align;
+		p{
+			margin-bottom:4em;
+		}
+	}
+	.learn{
+		font-size:.85em;
+		display:block;
+		color:white;
+		cursor:pointer;
+		width:80%;
+		padding:0 10%;
+	}
+	.learn:hover{
+		text-decoration:none;
+		background-color:lighten( $swatch-1, 10% )
+	}
+	.disclaimer{
+		font-size:.8em;
+		position:absolute;
+		bottom:.75em;
+		width:80%;
+		padding:0 10%;
+		text-align:center;
 	}
 }
 
-.sign-up{
-	@include box-sizing;
-	@include vertical-align;
-	margin: 0 auto;
-	border: 1px solid $grey-30;
-	width:65%;
-	text-align:center;
-	padding:31em;
+#map {
+    width: 100%;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    z-index:-1;
+}
+
+.beta-form{
+	@extend %center-align;
+	max-width: 900px;
+	.inverse{
+		border-color: white;
+		color: white;
+	}
+	input[type="text"]{
+		background-color:$swatch-1;
+		@include alpha-attribute('background-color', rgba($swatch-1, 0.15), white);
+		border-color: white;
+		color: white;
+	}
+	div:first-child{
+		@include span-first;
+	}
+	div{
+		@include span-4;
+	}
+	@include breakpoint(bp-3) {
+		*{
+			color:pink;
+		}
+	}
+}
+
+#more{
+	.more-wrapper{
+		padding:2em;
+		max-width:800px;
+		@extend %center-align;
+		@extend %vertical-align;
+	}
+	h2{
+		font-weight:100;
+		font-size:3em;
+		color:$swatch-2;
+		margin-bottom:.3em;
+	}
+	.list-more{
+		font-weight:100;
+		font-size:2em;
+		li{
+			color:$swatch-1;
+		}
+	}
+	ul{
+		height:4em;
+		padding:0;
+		list-style-type: none;
+	}
+	p{
+		font-size:1.7em;
+		font-weight:100;
+	}
+}
+
+footer{
+		@extend %center-align;
+		@include clearfix;
+		max-width:900px;
+		padding:2em 0;
+		border-top:1px solid $grey-10;
+		p{
+			color:$grey-10;
+		}
+		p:first-child{
+			float:left;
+		}
+		p.copyright{
+			float:right;
+		}
 }

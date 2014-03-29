@@ -15,56 +15,115 @@
         <link rel="stylesheet" href="css/screen.css">
         
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 12,
+
+                    //Kill the controls.
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    panControl: false,
+                    zoomControl: false,
+                    draggable: false,
+                    scrollwheel:false,
+                    disableDoubleClickZoom: true,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(35.149534, -90.048980), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [   {       featureType:'poi',      elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'poi',      elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'administrative',       elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:0},         {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road',     elementType:'labels',       stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'off'}      ]   },{     featureType:'water',        elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road.local',       elementType:'all',      stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'on'}       ]   },{     featureType:'water',        elementType:'geometry',     stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'on'}       ]   },{     featureType:'transit',      elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:0},         {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'landscape',        elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road',     elementType:'geometry',     stylers:[           {hue:'#bbbbbb'},            {saturation:-100},          {lightness:26},         {visibility:'on'}       ]   },{     featureType:'landscape',        elementType:'geometry',     stylers:[           {hue:'#dddddd'},            {saturation:-100},          {lightness:-3},         {visibility:'on'}       ]   }]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
   
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <h1>barrtr</h1>
-            <!-- <nav>
-                <ul>
-                    <li>one</li>
-                    <li>two</li>
-                    <li>three</li>
-                </ul>
-            </nav> -->
-        </header>
 
-        <section class="sign-up">
-            <h2>Beta Sign Up Headline</h2>
-            <form action="#" method="post">
-                <div>
-                     <label for="name">Text Input:</label>
-                     <input type="text" name="name" id="name" value="" tabindex="1" />
-                </div>
+        <section id="sign-up">
 
-                <div>
-                    <input class="btn-primary" type="submit" value="Submit" />
-                </div>
-            </form>
+            <div class="guts">
+
+                <img src="http://placehold.it/350x150" alt="Barrtr">
+
+                <p>Sign up now and get early access</p>
+                
+                <form action="#" method="post" class="beta-form">
+                    <div>
+                         <label for="name">Your email address*</label>
+                         <input type="text" name="name" id="name" value="" tabindex="1" />
+                    </div>
+
+                    <div>
+                        <label for="select-choice">I am a:</label>
+                        <select name="select-choice" id="select-choice">
+                            <option value="Choice 1">Designer</option>
+                            <option value="Choice 2">Small Business</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <input class="btn-cta-hollow inverse" type="submit" value="Submit" />
+                    </div>
+                </form>
+                <a class="learn icon-arrow-down-after" id="morelink">About</a>
+
+            </div><!-- close guts -->
+
+            <p class="disclaimer"><sup>*</sup>We won't share, sell, or give your information to anyone. Not even a band of rabid monkeys. We promise.</p>
+  
         </section>
 
+        <div id="map"></div>
+
+        <section id="more">
+            <div class="more-wrapper">
+                <h2>Have you ever wished:</h2>
+                <div class="list-more">
+                    <ul>
+                        <li>that you could trade a designer a few meals at your restaurant if they'd redesign your web page?</li>
+                        <li>that you could trade a mani/pedi to help get someones salon relevant on social media?</li>
+                        <li>Or get someone to build you a new app in exchange for a summer of lawn mowing?</li>
+                    </ul>
+                </div>
+                <h3>Wish Granted.</h3>
+                <p>Barrtr is the place where you can trade your skills &amp; expertise for someone else's. We will be launching soon so sign up above and we will be sure to let you know when everything is ready.</p>
+                <a href="#" id="sign-uplink" data-icon="&#xe655;">Sign Up</a>
+            </div>
         </section>
+
         <footer>
-            <p>&copy; 2014</p>
+            <p>
+                Built on Assembly
+            </p>
+            <p class="copyright">&copy; 2014</p>
         </footer>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <script type='text/javascript'>
-            $(function(){
-                $('body').css({'height':(($(document).height()))});
-
-                $(window).resize(function(){
-                    $('body').css({'height':(($(document).height()))});
-                });
-            });
-        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

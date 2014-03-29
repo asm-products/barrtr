@@ -303,6 +303,10 @@
 .icon-arrow-down:before {
 	content: "\e654";
 }
+.icon-arrow-down-after:after{
+	content: "\e654";
+	display:block
+}
 .icon-arrow-up:before {
 	content: "\e655";
 }
