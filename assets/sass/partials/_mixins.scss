@@ -332,3 +332,58 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+// background opacity from: http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+//
+// Helper classes and placeholders
+// --------------------------------------------------
+
+%pull-left {
+  float: left;
+}
+
+%pull-right {
+  float: right;
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+%center-align {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%table-stripe-even {
+    tr:nth-of-type(even) {
+    background: rgba(0,0,0,.5);
+  }
+}
+
+%table-stripe-odd {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
