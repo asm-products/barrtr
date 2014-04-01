@@ -12,6 +12,16 @@ function goToByScroll(id){
         'slow');
 }
 
+$('#name').focus(function() {
+    $('.disclaimer').fadeIn('slow');
+    $(document).bind('focusin.disclaimer click.disclaimer',function(e) {
+        if ($(e.target).closest('.disclaimer, #name').length) return;
+        $(document).unbind('.disclaimer');
+        $('.disclaimer').fadeOut('medium');
+    });
+});
+$('.disclaimer').hide();
+
 $(".learn, #sign-uplink").click(function(e) {
       // Prevent a page reload when a link is pressed
     e.preventDefault();
@@ -24,3 +34,4 @@ $(document).ready(function() {
 		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 	});
 });
+

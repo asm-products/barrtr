@@ -10,21 +10,29 @@
 	}
 	.guts{
 		@extend %vertical-align;
-		p{
-			margin-bottom:4em;
+		img{
+			margin-bottom: 2em;
 		}
 	}
 	.learn{
+		@include alpha-attribute('background-color', rgba(white, 0.75), white);
 		font-size:.85em;
 		display:block;
+		clear:both;
 		color:white;
 		cursor:pointer;
-		width:80%;
-		padding:0 10%;
+		position:fixed;
+		height:4em;
+		width:4em;
+		border-radius:4em;
+		color:$swatch-1;
+		bottom:4em;
+		left:50%;
+		left: calc(50% - 2em);
 	}
 	.learn:hover{
 		text-decoration:none;
-		background-color:lighten( $swatch-1, 10% )
+		background-color:white;
 	}
 	.disclaimer{
 		font-size:.8em;
@@ -47,23 +55,50 @@
 
 .beta-form{
 	@extend %center-align;
+	margin-bottom: 2em;
 	max-width: 900px;
 	.inverse{
 		border-color: white;
 		color: white;
 	}
+	label{
+		padding-bottom:1em;
+		display:block;
+	}
 	input[type="text"]{
-		background-color:$swatch-1;
-		@include alpha-attribute('background-color', rgba($swatch-1, 0.15), white);
+		background-color:transparent;
 		border-color: white;
+		text-align:center;
 		color: white;
 	}
-	div.form-col:first-child{
+
+	div:first-child{
 		@include span-first;
-	}
-	div.form-col{
+		@include span-4;
+	}	
+	.form-col-type{
 		@include span-4;
 	}
+	.form-col-cta{
+		@include span-4;
+	}
+
+	::-webkit-input-placeholder {
+	   color: white;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: white;  
+	}
+
 	@include breakpoint(bp-3) {
 		*{
 			color:pink;
@@ -99,6 +134,9 @@
 	p{
 		font-size:1.7em;
 		font-weight:100;
+	}
+	#sign-uplink{
+		white-space:nowrap;
 	}
 }
 
@@ -170,7 +208,7 @@ footer{
 
 .dropdown:hover,
 .dropdown.focus{
-	background: $swatch-1;
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.5), white);
 }
 
 /* CARAT */
@@ -282,11 +320,11 @@ footer{
 	opacity: 0;
 	color: $swatch-1;
 
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 .dropdown:hover div{
-	background: $swatch-1;
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.5), white);
 	border-radius: 5px;
 }
 
@@ -334,6 +372,7 @@ footer{
 
 .dropdown.scrollable.open ul{
 	overflow-y: auto;
+	border:2px solid white;
 }
 
 /* DROP DOWN LIST ITEMS */
@@ -341,7 +380,7 @@ footer{
 .dropdown li{
 	list-style: none;
 	padding: 14px 12px;
-	border-bottom: 1px solid white;
+	border-bottom: 2px solid white;
 }
 
 .dropdown li:last-child {

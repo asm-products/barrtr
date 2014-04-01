@@ -65,17 +65,16 @@
 
             <div class="guts">
 
-                <img src="http://placehold.it/350x150" alt="Barrtr">
-
-                <p>Sign up now and get early access</p>
+                <img src="img/logo.png" alt="Barrtr">
                 
                 <form action="#" method="post" class="beta-form">
-                    <div class="form-col">
-                         <label for="name">Your email address*</label>
-                         <input type="text" name="name" id="name" value="" tabindex="1" />
+
+                    <div class="form-col-name">
+                         <label for="name">Your email address:</label>
+                         <input type="text" name="name" id="name" value="" tabindex="1" placeholder="your@emailaddress.com"/>
                     </div>
 
-                    <div class="form-col">
+                    <div class="form-col-type">
                         <label for="select-choice">I am a:</label>
                         <select name="select-choice" id="select-choice" class="dropdown">
                             <option value="Choice 1">Designer</option>
@@ -83,13 +82,14 @@
                         </select>
                     </div>
 
-                    <div class="form-col">
+                    <div class="form-col-cta">
                         <input class="btn-cta-hollow inverse" type="submit" value="Submit" />
                     </div>
                 </form>
-                <a class="learn icon-arrow-down-after" id="morelink">About</a>
 
             </div><!-- close guts -->
+            
+            <a class="learn btn-cta" id="morelink">&nbsp;</a>
 
             <p class="disclaimer"><sup>*</sup>We won't share, sell, or give your information to anyone. Not even a band of rabid monkeys. We promise.</p>
   
@@ -109,7 +109,7 @@
                 </div>
                 <h3>Wish Granted.</h3>
                 <p>Barrtr is the place where you can trade your skills &amp; expertise for someone else's. We will be launching soon so sign up above and we will be sure to let you know when everything is ready.</p>
-                <a href="#" id="sign-uplink" data-icon="&#xe655;">Sign Up</a>
+                <a href="#" id="sign-uplink" class="btn-cta-hollow">Sign up now and get early access.</a>
             </div>
         </section>
 
