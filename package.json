@@ -13,5 +13,9 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "ejs": "~0.8.5"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-sass": "~0.12.1"
   }
 }
