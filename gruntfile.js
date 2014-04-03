@@ -3,14 +3,14 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'public/stylesheets/style.css': 'assets/stylesheets/style.scss'
+          'build/stylesheets/style.css': 'assets/stylesheets/style.scss'
         }
       }
     },
     concat: {
       dist: {
         files: {
-          'public/javascripts/script.js': 'assets/javascripts/**/*.js'
+          'build/javascripts/script.js': 'assets/javascripts/**/*.js'
         }
       }
     },
