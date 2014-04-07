@@ -7,4 +7,4 @@ node_modules/
 public/lib
 test/coverage
 mean.iml
-/public/build/
+build/*
