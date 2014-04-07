@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Barrtr | Sign Up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/javascripts/script.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 12,
+
+                    //Kill the controls.
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    panControl: false,
+                    zoomControl: false,
+                    draggable: false,
+                    scrollwheel:false,
+                    disableDoubleClickZoom: true,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(35.149534, -90.048980), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [   {       featureType:'poi',      elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'poi',      elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'administrative',       elementType:'all',      stylers:[           {hue:'#000000'},            {saturation:0},         {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road',     elementType:'labels',       stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'off'}      ]   },{     featureType:'water',        elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road.local',       elementType:'all',      stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'on'}       ]   },{     featureType:'water',        elementType:'geometry',     stylers:[           {hue:'#ffffff'},            {saturation:-100},          {lightness:100},            {visibility:'on'}       ]   },{     featureType:'transit',      elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:0},         {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'landscape',        elementType:'labels',       stylers:[           {hue:'#000000'},            {saturation:-100},          {lightness:-100},           {visibility:'off'}      ]   },{     featureType:'road',     elementType:'geometry',     stylers:[           {hue:'#bbbbbb'},            {saturation:-100},          {lightness:26},         {visibility:'on'}       ]   },{     featureType:'landscape',        elementType:'geometry',     stylers:[           {hue:'#dddddd'},            {saturation:-100},          {lightness:-3},         {visibility:'on'}       ]   }]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
+  
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <section id="sign-up">
+
+            <div class="guts">
+
+                <img src="img/logo.png" alt="Barrtr">
+                
+                <form action="#" method="post" class="beta-form">
+
+                    <div class="form-col-name">
+                         <label for="name">Your email address:</label>
+                         <input type="text" name="name" id="name" value="" tabindex="1" placeholder="your@emailaddress.com"/>
+                    </div>
+
+                    <div class="form-col-type">
+                        <label for="select-choice">I am a:</label>
+                        <select name="select-choice" id="select-choice" class="dropdown">
+                            <option value="Choice 1">Designer</option>
+                            <option value="Choice 2">Small Business</option>
+                        </select>
+                    </div>
+
+                    <div class="form-col-cta">
+                        <input class="btn-cta-hollow inverse" type="submit" value="Submit" />
+                    </div>
+                </form>
+
+            </div><!-- close guts -->
+            
+            <a class="learn btn-cta" id="morelink">&nbsp;</a>
+
+            <p class="disclaimer"><sup>*</sup>We won't share, sell, or give your information to anyone. Not even a band of rabid monkeys. We promise.</p>
+  
+        </section>
+
+        <div id="map"></div>
+
+        <section id="more">
+            <div class="more-wrapper">
+                <h2>Have you ever wished:</h2>
+                <div class="list-more">
+                    <ul>
+                        <li>that you could trade a designer a few meals at your restaurant if they'd redesign your web page?</li>
+                        <li>that you could trade a mani/pedi to help get someones salon relevant on social media?</li>
+                        <li>Or get someone to build you a new app in exchange for a summer of lawn mowing?</li>
+                    </ul>
+                </div>
+                <h3>Wish Granted.</h3>
+                <p>Barrtr is the place where you can trade your skills &amp; expertise for someone else's. We will be launching soon so sign up above and we will be sure to let you know when everything is ready.</p>
+                <a href="#" id="sign-uplink" class="btn-cta-hollow">Sign up now and get early access.</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Built on Assembly
+            </p>
+            <p class="copyright">&copy; 2014</p>
+        </footer>
+    </body>
+</html>
