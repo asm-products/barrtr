@@ -1,0 +1,402 @@
+// Here are the site specific styles
+
+#sign-up{
+	background-color:$swatch-1;
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.75), white);
+	text-align:center;
+	position:relative;
+	h1, h2, p, form{
+		color: $inverse-text;
+	}
+	.guts{
+		@extend %vertical-align;
+		img{
+			margin-bottom: 2em;
+		}
+	}
+	.learn{
+		@include alpha-attribute('background-color', rgba(white, 0.75), white);
+		font-size:.85em;
+		display:block;
+		clear:both;
+		color:white;
+		cursor:pointer;
+		position:fixed;
+		height:4em;
+		width:4em;
+		border-radius:4em;
+		color:$swatch-1;
+		bottom:4em;
+		left:50%;
+		left: calc(50% - 2em);
+	}
+	.learn:hover{
+		text-decoration:none;
+		background-color:white;
+	}
+	.disclaimer{
+		font-size:.8em;
+		position:absolute;
+		bottom:.75em;
+		width:80%;
+		padding:0 10%;
+		text-align:center;
+	}
+}
+
+#map {
+    width: 100%;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    z-index:-1;
+}
+
+.beta-form{
+	@extend %center-align;
+	margin-bottom: 2em;
+	max-width: 900px;
+	.inverse{
+		border-color: white;
+		color: white;
+	}
+	label{
+		padding-bottom:1em;
+		display:block;
+	}
+	input[type="text"]{
+		background-color:transparent;
+		border-color: white;
+		text-align:center;
+		color: white;
+	}
+
+	div:first-child{
+		@include span-first;
+		@include span-4;
+	}	
+	.form-col-type{
+		@include span-4;
+	}
+	.form-col-cta{
+		@include span-4;
+	}
+
+	::-webkit-input-placeholder {
+	   color: white;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: white;  
+	}
+
+	@include breakpoint(bp-3) {
+		*{
+			color:pink;
+		}
+	}
+}
+
+#more{
+	.more-wrapper{
+		padding:2em;
+		max-width:800px;
+		@extend %center-align;
+		@extend %vertical-align;
+	}
+	h2{
+		font-weight:100;
+		font-size:3em;
+		color:$swatch-2;
+		margin-bottom:.3em;
+	}
+	.list-more{
+		font-weight:100;
+		font-size:2em;
+		li{
+			color:$swatch-1;
+		}
+	}
+	ul{
+		height:4em;
+		padding:0;
+		list-style-type: none;
+	}
+	p{
+		font-size:1.7em;
+		font-weight:100;
+	}
+	#sign-uplink{
+		white-space:nowrap;
+	}
+}
+
+footer{
+		@extend %center-align;
+		@include clearfix;
+		max-width:900px;
+		padding:2em 0;
+		border-top:1px solid $grey-10;
+		p{
+			color:$grey-10;
+		}
+		p:first-child{
+			float:left;
+		}
+		p.copyright{
+			float:right;
+		}
+}
+
+//dropdowns
+
+/* PREFIXED CSS */
+
+.dropdown,
+.dropdown div,
+.dropdown li,
+.dropdown div::after,
+.dropdown .carat,
+.dropdown .carat:after,
+.dropdown .selected::after,
+.dropdown:after{
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.dropdown .selected::after,
+.dropdown.scrollable div::after{
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+}
+
+/* WRAPPER */
+
+.dropdown{
+	position: relative;
+	width: 250px;
+	cursor: pointer;
+	font-weight: 200;
+	background: transparent;
+	padding: 8px 0px 8px;
+	
+	border-radius: 3px;
+	border:2px solid white;
+	
+	color:  #000;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.dropdown.open{
+	z-index: 2;
+}
+
+.dropdown:hover,
+.dropdown.focus{
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.5), white);
+}
+
+/* CARAT */
+
+.dropdown .carat,
+.dropdown .carat:after{
+	position: absolute;
+	right: 14px;
+	top: 50%;
+	margin-top: -3px;
+	border: 6px solid transparent;
+	border-top: 6px solid #FFF;
+	z-index: 1;
+	
+	-webkit-transform-origin: 50% 20%;
+	-moz-transform-origin: 50% 20%;
+	-ms-transform-origin: 50% 20%;
+	transform-origin: 50% 20%;
+	
+}
+
+.dropdown:hover .carat:after{
+	border-top-color: white;
+}
+
+.dropdown.focus .carat{
+	border-top-color: white;
+}
+
+.dropdown.focus .carat:after{
+	border-top-color: white;
+}
+
+.dropdown.open .carat{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* OLD SELECT (HIDDEN) */
+
+.dropdown .old{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+.dropdown select{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.dropdown.touch select{
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+/* SELECTED FEEDBACK ITEM */ 
+.dropdown .selected {
+    color: #FFF;
+}
+
+.dropdown .selected,
+.dropdown li{
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	padding: 8px 12px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.dropdown .selected::after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 60px;
+	
+	border-radius: 0 3px 3px 0;
+}
+
+.dropdown:hover .selected::after,
+.dropdown.focus .selected::after{
+	//box-shadow: inset -55px 0 25px -20px #00c384;
+}
+
+/* DROP DOWN WRAPPER */
+
+.dropdown div{
+	position: absolute;
+	height: 0;
+	left: 0;
+	right: 0;
+	top: 100%;
+	margin-top: 1px;
+	background: transparent;
+	overflow: hidden;
+	opacity: 0;
+	color: $swatch-1;
+
+	border-radius: 3px;
+}
+
+.dropdown:hover div{
+	@include alpha-attribute('background-color', rgba($swatch-1, 0.5), white);
+	border-radius: 5px;
+}
+
+/* Height is adjusted by JS on open */
+
+.dropdown.open div{
+	opacity: 1;
+	z-index: 2;
+}
+
+/* FADE OVERLAY FOR SCROLLING LISTS */
+
+.dropdown.scrollable div::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	
+	//box-shadow: inset 0 -50px 30px -35px #00c384;
+}
+
+.dropdown.scrollable:hover div::after{
+	//box-shadow: inset 0 -50px 30px -35px #00c384;
+}
+
+.dropdown.scrollable.bottom div::after{
+	opacity: 0;
+}
+
+/* DROP DOWN LIST */
+
+.dropdown ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	border-radius: 5px;
+	padding:0;
+}
+
+.dropdown.scrollable.open ul{
+	overflow-y: auto;
+	border:2px solid white;
+}
+
+/* DROP DOWN LIST ITEMS */
+
+.dropdown li{
+	list-style: none;
+	padding: 14px 12px;
+	border-bottom: 2px solid white;
+}
+
+.dropdown li:last-child {
+    border-bottom: 0;
+}
+
+/* .focus class is also added on hover */
+
+.dropdown li.focus{
+	background: $swatch-1;
+	position: relative;
+	z-index: 3;
+	color: #fff;
+}
+
+.dropdown li.active{
+	background: $swatch-1;
+	color: #fff;
+}

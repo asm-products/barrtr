@@ -1,0 +1,104 @@
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+
+/* Reusable column setup */
+
+@mixin col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    //margin-left:2%;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+    margin-left:$gutter_pc;
+    float: left;
+}
+
+@mixin span-first {
+    margin-left:0;
+}
+ 
+
+    /* 1. 12 Column Grid 0px - Infinity 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    6.5%
+    Span 2:    15.0%
+    Span 3:    23.5%
+    Span 4:    32.0%
+    Span 5:    40.5%
+    Span 6:    49.0%
+    Span 7:    57.5%
+    Span 8:    66.0%
+    Span 9:    74.5%
+    Span 10:    83.0%
+    Span 11:    91.5%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */	
+    
+        
+        /* --- Gridpak variables ---*/ 
+        $max_columns: 12;
+        $gutter_px: 0;
+        $gutter_pc: 2%;
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        
+        */
+        @mixin span-1 {
+            @include span(1, $gutter_pc, $gutter_px, $max_columns);
+        }
+        @mixin span-2 {
+            @include span(2, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-3 {
+            @include span(3, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-4 {
+            @include span(4, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-5 {
+            @include span(5, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-6 {
+            @include span(6, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-7 {
+            @include span(7, $gutter_pc, $gutter_px, $max_columns);
+        }
+         @mixin span-8 {
+            @include span(8, $gutter_pc, $gutter_px, $max_columns);
+        }
+        @mixin span-9 {
+            @include span(9, $gutter_pc, $gutter_px, $max_columns);
+        }
+        @mixin span-10 {
+            @include span(10, $gutter_pc, $gutter_px, $max_columns);
+        }
+        @mixin span-11 {
+            @include span(11, $gutter_pc, $gutter_px, $max_columns);
+        }
+        @mixin span-12 {
+            @include span-first;
+            width:100%;
+        }
+ 
