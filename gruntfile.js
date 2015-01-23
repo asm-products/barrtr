@@ -101,8 +101,11 @@ module.exports = function(grunt) {
         },
         sass: {
             dist: {
+                options: {
+                  includePaths: require('node-bourbon').includePaths
+                },
                 files: {
-                    'public/stylesheets/style.css' : 'assets/sass/style.scss'
+                    'public/css/screen.css' : 'assets/sass/screen.scss'
                 }
             }
         }
