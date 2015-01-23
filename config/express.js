@@ -9,6 +9,7 @@ var express = require('express'),
     flash = require('connect-flash'),
     helpers = require('view-helpers'),
     assetmanager = require('assetmanager'),
+    swig = require('swig'),
     config = require('./config');
 
 module.exports = function(app, passport, db) {
@@ -16,8 +17,8 @@ module.exports = function(app, passport, db) {
 
     // Prettify HTML
     app.locals.pretty = true;
-		// cache=memory or swig dies in NODE_ENV=production
-		app.locals.cache = 'memory';
+    // cache=memory or swig dies in NODE_ENV=production
+    app.locals.cache = 'memory';
 
     // Should be placed before express.static
     // To ensure that all assets and data are compressed (utilize bandwidth)
@@ -33,6 +34,8 @@ module.exports = function(app, passport, db) {
     // Only use logger for development environment
     if (process.env.NODE_ENV === 'development') {
         app.use(express.logger('dev'));
+        swig.setDefaults({ cache: false });
+        app.disable('etag');
     }
 
     // assign the template engine to .html files
