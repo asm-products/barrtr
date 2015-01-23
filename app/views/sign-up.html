@@ -1,0 +1,66 @@
+{% extends 'layouts/landing.html' %}
+{% block content %}
+<section id="sign-up">
+
+  <div class="guts">
+
+    <img src="/img/logo.png" alt="Barrtr">
+
+    <div id="mce-responses" class="form-col-name">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+
+    <form  method="post" action="http://eepurl.com/XZEoH" target="_blank" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="beta-form validate" novalidate>
+      <div class="form-col-name">
+        <label for="mce-EMAIL">Your email address:</label>
+        <input type="text" name="EMAIL" id="mce-EMAIL" value="" tabindex="1" required="true" placeholder="your@emailaddress.com"/>
+      </div>
+      <div class="form-col-type">
+        <label for="mce-USERTYPE">I am a:</label>
+        <select name="USERTYPE" id="mce-USERTYPE" class="dropdown" required="true">
+          <option value="Designer">Designer</option>
+          <option value="Small Business">Small Business</option>
+        </select>
+      </div>
+      <div class="form-col-type">
+        <input class="btn-cta-hollow inverse" style="margin: 32px 55px;" type="submit" value="Submit" />
+      </div>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_819b3d7c4e74fb283edc00cc2_272997919f" tabindex="-1" value=""></div>
+    </form>
+
+  </div><!-- close guts -->
+
+  <!--<a class="learn btn-cta" id="morelink">&nbsp;</a>	-->
+
+  <p class="disclaimer"><sup>*</sup>We won't share, sell, or give your information to anyone. Not even a band of rabid monkeys. We promise.</p>
+
+</section>
+
+<div id="map"></div>
+
+<section id="more">
+  <div class="more-wrapper">
+    <h2>Have you ever wished:</h2>
+    <div class="list-more">
+      <ul>
+        <li>that you could trade a designer a few meals at your restaurant if they'd redesign your web page?</li>
+        <li>that you could trade a mani/pedi to help get someones salon relevant on social media?</li>
+        <li>Or get someone to build you a new app in exchange for a summer of lawn mowing?</li>
+      </ul>
+    </div>
+    <h3>Wish Granted.</h3>
+    <p>Barrtr is the place where you can trade your skills &amp; expertise for someone else's. We will be launching soon so sign up above and we will be sure to let you know when everything is ready.</p>
+    <a href="#" id="sign-uplink" class="btn-cta-hollow">Sign up now and get early access.</a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    Built on Assembly
+  </p>
+  <p class="copyright">&copy; 2014</p>
+</footer>
+
+{% endblock %}
