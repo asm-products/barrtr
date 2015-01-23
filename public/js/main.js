@@ -30,8 +30,7 @@ $(".learn, #sign-uplink").click(function(e) {
 });
 
 $(document).ready(function() {
-    $('#more ul').cycle({
-		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-	});
+  $('#more ul').cycle({
+    fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+  });
 });
-
