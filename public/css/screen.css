@@ -1,3 +1,17 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -850,15 +864,15 @@ textarea {
   float: right; }
 
 /**
- * Gridpak Beta SCSS 
+ * Gridpak Beta SCSS
  *
  * Generator - http://gridpak.com/
  * Created by @erskinedesign
  */
 /* Reusable column setup */
-/* 1. 12 Column Grid 0px - Infinity 
-    ----------------------------------------------------------------------------- 
-    
+/* 1. 12 Column Grid 0px - Infinity
+    -----------------------------------------------------------------------------
+
     Span 1:    6.5%
     Span 2:    15.0%
     Span 3:    23.5%
@@ -871,17 +885,17 @@ textarea {
     Span 10:    83.0%
     Span 11:    91.5%
     Span 12:    100%
-    
+
     ----------------------------------------------------------------------------- */
 /* --- Gridpak variables ---*/
 /*
         Add your semantic classnames in alongside their corresponding spans here. e.g.
-        
+
         .span_3,
         .my_semantic_class_name {
             ...
         }
-        
+
         */
 body {
   color: #666;
@@ -1955,9 +1969,24 @@ textarea[class*="span"] {
   left: 0;
   z-index: -1; }
 
+.span12 {
+  margin-left: 0;
+  width: 100%; }
+
 .beta-form {
+  zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2em;
   max-width: 900px; }
+  .beta-form:before, .beta-form:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .beta-form:after {
+    clear: both; }
   .beta-form .inverse {
     border-color: white;
     color: white; }
@@ -1969,19 +1998,33 @@ textarea[class*="span"] {
     border-color: white;
     text-align: center;
     color: white; }
-  .beta-form div:first-child {
-    margin-left: 0;
-    width: 32%;
-    margin-left: 2%;
-    float: left; }
+  .beta-form .form-col-name {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .beta-form .form-col-name:last-child {
+      margin-right: 0; }
   .beta-form .form-col-type {
-    width: 32%;
-    margin-left: 2%;
-    float: left; }
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .beta-form .form-col-type:last-child {
+      margin-right: 0; }
+    .beta-form .form-col-type .dropdown {
+      width: 100%; }
+    .beta-form .form-col-type .btn-cta-hollow {
+      margin-top: 32px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
   .beta-form .form-col-cta {
-    width: 32%;
-    margin-left: 2%;
-    float: left; }
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .beta-form .form-col-cta:last-child {
+      margin-right: 0; }
   .beta-form ::-webkit-input-placeholder {
     color: white; }
   .beta-form :-moz-placeholder {

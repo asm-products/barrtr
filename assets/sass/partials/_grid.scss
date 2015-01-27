@@ -1,5 +1,5 @@
 /**
- * Gridpak Beta SCSS 
+ * Gridpak Beta SCSS
  *
  * Generator - http://gridpak.com/
  * Created by @erskinedesign
@@ -29,11 +29,11 @@
 @mixin span-first {
     margin-left:0;
 }
- 
 
-    /* 1. 12 Column Grid 0px - Infinity 
-    ----------------------------------------------------------------------------- 
-    
+
+    /* 1. 12 Column Grid 0px - Infinity
+    -----------------------------------------------------------------------------
+
     Span 1:    6.5%
     Span 2:    15.0%
     Span 3:    23.5%
@@ -46,23 +46,23 @@
     Span 10:    83.0%
     Span 11:    91.5%
     Span 12:    100%
-    
-    ----------------------------------------------------------------------------- */	
-    
-        
-        /* --- Gridpak variables ---*/ 
+
+    ----------------------------------------------------------------------------- */
+
+
+        /* --- Gridpak variables ---*/
         $max_columns: 12;
         $gutter_px: 0;
         $gutter_pc: 2%;
-        
+
         /*
         Add your semantic classnames in alongside their corresponding spans here. e.g.
-        
+
         .span_3,
         .my_semantic_class_name {
             ...
         }
-        
+
         */
         @mixin span-1 {
             @include span(1, $gutter_pc, $gutter_px, $max_columns);
@@ -101,4 +101,3 @@
             @include span-first;
             width:100%;
         }
- 

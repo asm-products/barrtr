@@ -53,8 +53,13 @@
     z-index:-1;
 }
 
+.span12 {
+  @include span-12;
+}
+
 .beta-form{
   @extend %center-align;
+  @include outer-container;
   margin-bottom: 2em;
   max-width: 900px;
   .inverse{
@@ -72,15 +77,24 @@
     color: white;
   }
 
-  div:first-child{
-    @include span-first;
-    @include span-4;
+  .form-col-name{
+    @include span-columns(4);
   }
   .form-col-type{
-    @include span-4;
+    @include span-columns(4);
+
+    .dropdown {
+      width: 100%;
+    }
+
+    .btn-cta-hollow {
+      margin-top: 32px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   .form-col-cta{
-    @include span-4;
+    @include span-columns(4);
   }
 
   ::-webkit-input-placeholder {

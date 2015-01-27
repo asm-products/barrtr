@@ -61,6 +61,7 @@
     "karma-requirejs": "~0.2.0",
     "karma-script-launcher": "~0.1.0",
     "node-bourbon": "^1.2.3",
+    "node-neat": "^1.4.2",
     "should": "2.1.1",
     "supertest": "0.8.2"
   }
