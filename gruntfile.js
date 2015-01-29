@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         },
         jshint: {
             all: {
-                src: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
+                src: ['gruntfile.js', 'server.js', 'app/**/*.js', '!public/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
                 options: {
                     jshintrc: true
                 }
@@ -47,14 +47,14 @@ module.exports = function(grunt) {
                 files: '<%= assets.js %>'
             }
         },
-        csslint: {
-            options: {
-                csslintrc: '.csslintrc'
-            },
-            all: {
-                src: ['public/css/**/*.css']
-            }
-        },
+        // csslint: {
+        //     options: {
+        //         csslintrc: '.csslintrc'
+        //     },
+        //     all: {
+        //         src: ['public/css/**/*.css']
+        //     }
+        // },
         cssmin: {
             combine: {
                 files: '<%= assets.css %>'
@@ -101,8 +101,11 @@ module.exports = function(grunt) {
         },
         sass: {
             dist: {
+                options: {
+                  includePaths: require('node-neat').includePaths
+                },
                 files: {
-                    'public/stylesheets/style.css' : 'assets/sass/style.scss'
+                    'public/css/screen.css' : 'assets/sass/screen.scss'
                 }
             }
         }
